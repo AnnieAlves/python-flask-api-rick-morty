@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+    <h2>Episode List:</h2>
+    <ul>
+        {% for episode in episodes %}
+            <li>
+                <a href="/episodes/{{ episode.id }}">{{ episode.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

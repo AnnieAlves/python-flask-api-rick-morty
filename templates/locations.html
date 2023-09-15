@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+    <h2>List of locations:</h2>
+    <ul>
+        {% for location in locations %}               
+            <li>
+                <a href="/locations/{{ location.id }}">{{ location.name }}</a>
+            </li>        
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
