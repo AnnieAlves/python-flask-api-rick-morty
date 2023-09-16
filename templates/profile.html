@@ -12,9 +12,7 @@
         <p> <strong> Species: </strong> {{profile.species}}</p>
         <p> <strong> Gender: </strong> {{profile.gender}}</p>
         <p> <strong> Origin: </strong> {{profile.origin.name}}</p>
-        <p> <strong> Location: </strong> {{profile.location.name}}</p>
-        
-        
+        <p><strong>Location:</strong> <a href="{{ url_for('get_location_profile', id=location.id) }}">{{profile.location.name}}</a></p>
         
     </div>
 </div>

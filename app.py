@@ -30,9 +30,14 @@ def get_profile(id):
     url = "https://rickandmortyapi.com/api/character/" + id
     response = urllib.request.urlopen(url)
     data = response.read()
-    dict = json.loads(data)
+    profile = json.loads(data)
 
-    return render_template("profile.html", profile=dict)
+    location_url = profile["location"]["url"]
+    location_response = urllib.request.urlopen(location_url)
+    location_data = location_response.read()
+    location_dict = json.loads(location_data)
+
+    return render_template("profile.html", profile=profile, location=location_dict)
 
 
 @app.route('/lista')
