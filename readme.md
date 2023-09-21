@@ -32,6 +32,6 @@ Na página de perfil do personagem, adicione as seguintes informações: espéci
 
 É necessário instalar os arquivos através do ``` pip install -r requirements.txt```
 Também deve-se criar um Virtual Envrioment
-```python
+```bash
 python -3 -m venv .venv
 ```
